@@ -1,0 +1,15 @@
+[package]
+name = "zinnobre_iron"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = { version = "0.14.1", features = [ "default", "serialize" ] }
+leafwing-input-manager = "0.15"
+leafwing_abilities = "0.8"
+lightyear = {version = "0.16", features = [ "leafwing" ] }
+serde = {version = "1.0.188", features = ["derive"]}
+anyhow = {version = "1.0.75"}

@@ -123,6 +123,7 @@ fn handle_new_character(
     for (entity, color, is_controlled) in &mut character_query {
         if is_controlled {
             info!("Adding InputMap to controlled and predicted entity {entity:?}");
+            // TODO: refactor to input module
             commands.entity(entity).insert(
                 InputMap::new([(CharacterAction::Jump, KeyCode::Space)])
                     .with_dual_axis(CharacterAction::Move, KeyboardVirtualDPad::WASD),

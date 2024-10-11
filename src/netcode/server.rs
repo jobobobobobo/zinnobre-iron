@@ -28,6 +28,7 @@ pub struct ZinnobreIronServerPlugin;
 
 impl Plugin for ZinnobreIronServerPlugin {
     fn build(&self, app: &mut bevy::prelude::App) {
+        app.add_systems(Startup, init);
         app.add_systems(PreUpdate, replicate_inputs.after(MainSet::EmitEvents));
         app.add_systems(FixedUpdate, handle_character_actions.in_set(FixedSet::Main));
         app.add_systems(Update, handle_connections);

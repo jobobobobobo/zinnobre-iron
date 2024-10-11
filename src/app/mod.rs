@@ -1,5 +1,5 @@
-mod settings;
-mod shared;
+pub(crate) mod settings;
+pub(crate) mod shared;
 
 use crate::app::server::plugin::ServerPlugins;
 use crate::app::settings::{build_client_netcode_config, Settings};
@@ -7,6 +7,7 @@ use bevy::log::{Level, LogPlugin};
 use bevy::prelude::App;
 use bevy::prelude::AssetPlugin;
 use bevy::prelude::Plugin;
+use bevy::prelude::PluginGroup;
 use bevy::state::app::StatesPlugin;
 use bevy::utils::default;
 use bevy::DefaultPlugins;

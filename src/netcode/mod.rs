@@ -1,4 +1,4 @@
 mod client;
-mod protocol;
+pub(crate) mod protocol;
 mod server;
-mod shared;
+pub(crate) mod shared;

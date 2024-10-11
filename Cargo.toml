@@ -7,9 +7,21 @@ license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-bevy = { version = "0.14.1", features = [ "default", "serialize" ] }
+bevy = { version = "0.14.1", default-features = false, features = [ "default", "serialize", "bevy_state", "multi_threaded" ] }
 leafwing-input-manager = "0.15"
 leafwing_abilities = "0.8"
-lightyear = {version = "0.16", features = [ "leafwing" ] }
+avian3d = {version = "0.1.2", default-features = false, features = [
+    "3d",
+    "f32",
+    "parry-f32",
+    "parallel",
+    "serialize"]}
+lightyear = {path = "../lightyear/lightyear", features = [ "leafwing", "avian3d", "steam" ] }
 serde = {version = "1.0.188", features = ["derive"]}
 anyhow = {version = "1.0.75"}
+bevy_screen_diagnostics = "0.6.0"
+bevy-inspector-egui = "0.26"
+async-compat = "0.2.4"
+crossbeam-channel = "0.5.12"
+rand = "0.8.5"
+clap = {version = "4.5.4", features = ["derive"]}

@@ -1,6 +1,10 @@
+use app::Cli;
+
+mod app;
 mod input;
 mod netcode;
+mod render;
 
 fn main() {
-    println!("Hello, world!");
+    let cli = Cli::default();
 }
